@@ -6,7 +6,9 @@ Team Members:
 3) Justin Alianto - University of Toronto, Computer Science Specialist
 
 ## Instructions to Run Model
-Our model script lies inside horse_eda_model.ipynb. In order to run the model with a new dataset, just change the data filepath inside the third cell of the entire notebook with the one that you want to use and run the whole script from start to finish in one go.
+Our model script lies inside horse_eda_model.ipynb. In order to run the model with a new dataset, just change the data filepath inside the seventh code cell of the entire notebook with the one that you want to use and run the whole script from start to finish in one go.
+
+Take note of the first few cells inside the script if your Python environment does not consist of any of the Python library packages that we used.
 
 Note the following:
 - Be mindful to add your own new dataset into the same folder as the model script.
