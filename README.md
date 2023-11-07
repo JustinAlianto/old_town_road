@@ -8,11 +8,9 @@ Team Members:
 ## Instructions to Run Model
 Our model script lies inside horse_eda_model.ipynb. In order to run the model with a new dataset, just change the data filepath inside the seventh code cell of the entire notebook with the one that you want to use and run the whole script from start to finish in one go.
 
-Take note of the first few cells inside the script if your Python environment does not consist of any of the Python library packages that we used.
-
 Note the following:
-- Be mindful to add your own new dataset into the same folder as the model script.
-- Remember to have xgboost installed inside your Python environment (via Anaconda, etc) in your Jupyter notebook. The installation code is commented out in the second cell.
+- Be mindful to add your own new dataset into the same folder as the model notebook script. Make sure that the dataset to be used is a **parquet** file
+- Take note of the first few cells inside the script if your Python environment does not consist of any of the Python library packages that we used. The installation codes are commented out in the first 5 code cells.
 
 ## EDA
 We first constructed a correlation matrix, and we were able to remove some of the redundant columns from our selected set of features that contained information about the target label that we chose (see the section below). This includes the performance columns which are highly correlated with each other.
