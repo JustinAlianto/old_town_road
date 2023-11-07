@@ -62,14 +62,23 @@ Hence, we predicted the win probability based on each horse’s relative positio
 
 ## Model Training
 To train our ML model to make predictions on new races, we used XGBoost with the following hyperparameters:
-params = {
+
+params= {
+
     'learning_rate': 0.7, 
+    
     'eval_metric': 'logloss',
+    
     'max_depth': 5,
+    
     'subsample': 1,
+    
     'colsample_bytree': 0.8,
+    
     'lambda': 0.8,
+    
     'alpha': 0.3
+    
 }
 
 ## Model Evaluation
