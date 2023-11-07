@@ -24,6 +24,7 @@ Based on the exploration steps above, we saw that column with blanks (with the n
 4) HandicapType = 1042792
 5) SexRestriction = 888663
 6) RaceGroup = 1177555 (Level of competition, G1 being the best; might be useful to prediction)
+
 Based on this, we removed RaceGroup, CourseIndicator, HandicapType, SexRestriction, AgeRestriction and ClassRestriction from our model.
 
 ### Adding Performance Predictors
@@ -35,24 +36,24 @@ Apart from removing the columns with numerous blank values (RaceGroup, CourseInd
 Before passing the data into the model for training, we also made sure to convert all categorical features to be of ‘category’ type in Python. The final list of features that we are using are:
 
 Data Columns (total 16 columns):
-     Column                                    Dtype   
----  ------                                          --------   
- 0   Barrier                   	        category
- 1   Distance                	        float64 
- 2   FrontShoes           	        category
- 3   Gender                 	 	        category
- 4   GoingAbbrev         	        category
- 5   HindShoes            	        category
- 6   HorseAge              	        int64   
- 7   RacePrizemoney  	        float64 
- 8   RacingSubType     	        category
- 9   Saddlecloth            	        category
- 10  StartType                                 category
- 11  StartingLine                    	        int64   
- 12  Surface                                    category
- 13  WeightCarried                         float64 
- 14  WetnessScale                         int64   
- 15  PastAveragePositionQuantile float64
+| #  | Feature Name                | Data Type |
+|----|-----------------------------|-----------|
+| 0  | Barrier                     | category  |
+| 1  | Distance                    | float64   |
+| 2  | FrontShoes                  | category  |
+| 3  | Gender                      | category  |
+| 4  | GoingAbbrev                 | category  |
+| 5  | HindShoes                   | category  |
+| 6  | HorseAge                    | int64     |
+| 7  | RacePrizemoney              | float64   |
+| 8  | RacingSubType               | category  |
+| 9  | Saddlecloth                 | category  |
+| 10 | StartType                   | category  |
+| 11 | StartingLine                | int64     |
+| 12 | Surface                     | category  |
+| 13 | WeightCarried               | float64   |
+| 14 | WetnessScale                | int64     |
+| 15 | PastAveragePositionQuantile | float64   |
 
 ### Setting Up Target Label
 We decided to approach the problem through a different perspective. We find that the traditional binary outcome (won or lost) treats any non-first-placing horses the same, regardless of their relative position to the winning horses. Horses who placed in the top-three, for example, should have a better chance of winning future races than those in the last place.
@@ -68,7 +69,7 @@ params = {
     'subsample': 1,
     'colsample_bytree': 0.8,
     'lambda': 0.8,
-    'alpha': 0.3,
+    'alpha': 0.3
 }
 
 ## Model Evaluation
